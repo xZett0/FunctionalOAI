@@ -130,6 +130,12 @@ def add(x: int, y: int):
 -   This module is not fully complete as it still lacks some extra functionality
 -   There is no error handling as for now, so obeying the rules of function defining is necessary
 
+## TODO
+
+-    create a special type for the functions list, to make it more flexable and accessable
+-    create a multi-line docstring parser that gets a description for the function and a description for each of the arguments
+-    handle all possible errors in creating the body of the function, and create backup plans in case something was missing in the function definition
+
 ## Contribute
 
 ### You could contribute through
