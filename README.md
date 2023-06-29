@@ -24,7 +24,7 @@ python3 setup.py install
 
 ```python
 # importing the main class
-from funAI import FunAI
+from functionalOAI import FunAI
 
 helper = FunAI()
 
