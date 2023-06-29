@@ -42,6 +42,8 @@ helper.functions = my_function
 print(helper.functions)
 ```
 
+-    After creating you're functions then you could use openai python module to create a chat with chatgpt and you could provide it with helper.functions
+
 ## NOTICE!!
 
 To make this module work correctly with all of you're functions there are set of rules you have to go by when defining the functions
