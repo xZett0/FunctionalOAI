@@ -42,7 +42,7 @@ client.functions = my_function
 print(client.functions)
 ```
 
--    After creating you're functions then you could use openai python module to create a chat with chatgpt and you could provide it with helper.functions e.g ...
+-    After creating you're functions then you could use openai python module to create a chat with chatgpt and you could provide it with client.functions e.g ...
 
 ```python
 from functionalOAI import FunAI
