@@ -16,7 +16,7 @@ setup(
     install_requires=[],
     keywords=['python', "OpenAI", "ChatGPT", "GPT API", "function calling API", "functions", "openai-gpt"],
     classifiers=[
-        "Development Status :: 1 - production",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
