@@ -32,8 +32,8 @@ client = FunAI()
 def my_function(*args, **kwargs):
     # provide gpt with something
 
-# you could also use attachFunction
-client.attachFunction([my_function, func1, func2])
+# you could also use attachFunctions
+client.attachFunctions([my_function, func1, func2])
 
 # or even this cursed one
 client.functions = my_function
