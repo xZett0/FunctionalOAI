@@ -58,7 +58,7 @@ def get_current_weather(location: str, unit: str = "fahrenheit"):
         "unit": unit,
         "forecast": ["sunny", "windy"],
     }
-    return json.dumps(weather_info
+    return json.dumps(weather_info)
 
 def run_conversation():
     messages = [{"role": "user", "content": "What's the weather like in Boston?"}]
