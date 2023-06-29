@@ -1,0 +1,1 @@
+from .funAI import FunAI
