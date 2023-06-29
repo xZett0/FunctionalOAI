@@ -10,13 +10,13 @@ If you have any features or ideas that could be added to this project, you could
 
 -   Through pip
 
-```python
+```console
 pip3 install funcOAI
 ```
 
 -   Through setup.py
 
-```python
+```console
 python3 setup.py install
 ```
 
