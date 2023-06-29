@@ -105,6 +105,8 @@ def run_conversation():
 print(run_conversation())
 ```
 
+### This is an edited example of the [official OpenAI API example](https://platform.openai.com/docs/guides/gpt/function-calling)
+
 ## NOTICE!!
 
 To make this module work correctly with all of you're functions there are set of rules you have to go by when defining the functions
