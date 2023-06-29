@@ -65,7 +65,7 @@ def add(x: int, y: int):
 ## WARNING
 
 -   This module is not fully complete as it still lacks some extra functionality
--   There is no error handling as for now, so obeying the rules of function creating is necessary
+-   There is no error handling as for now, so obeying the rules of function defining is necessary
 
 ## Contribute
 
