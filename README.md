@@ -105,6 +105,9 @@ def run_conversation():
 print(run_conversation())
 ```
 
+### This is an edited example of the [official OpenAI API example](https://platform.openai.com/docs/guides/gpt/function-calling)
+
+
 ## New Usage Feature
 
 -    You could now access all the elements inside the functions list and do all sort of list methods on them (most of them at least you could look in functions.py to see all the overridden list methods)
@@ -163,8 +166,6 @@ client.functions.key_to_name(0) # suM
 # clear the whole list
 client.functions.clear()
 ```
-
-### This is an edited example of the [official OpenAI API example](https://platform.openai.com/docs/guides/gpt/function-calling)
 
 ## NOTICE!!
 
