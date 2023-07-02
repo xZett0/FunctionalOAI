@@ -105,6 +105,65 @@ def run_conversation():
 print(run_conversation())
 ```
 
+## New Usage Feature
+
+-    You could now access all the elements inside the functions list and do all sort of list methods on them (most of them at least you could look in functions.py to see all the overridden list methods)
+```python
+from functionalOAI import FunAI
+
+client = FunAI()
+
+@client.attach
+def suM(a: int, b: int):
+    """return the sum of a and b"""
+    return a + b
+
+def muL(a: int, b: int):
+    """return the multiplication of a and b"""
+    return a * b
+
+print(client.functions)
+client.functions.append({"name": "muL", "description": "return the multiplication of a and b", ...})
+print(client.functions)
+```
+### Its made to make removing / adding / deleting functions easy
+
+```python
+# see if a function inside the list by the name or the body
+print("muL" in client.functions) # True
+
+# remove function by name (you could also add the whole body of the function)
+client.functions.remove("muL")
+
+print("muL" in client.functions) # False
+
+# remove a function using the del keyword
+del client.functions["muL"] # error since muL was already removed
+
+
+print(client.functions)
+
+# get the body of a specefic function by its name or its index in the list
+print(client.functions["suM"])
+
+# multiple ways to add a function
+client.functions.append({"name": "test", "description": "..."})
+client.functions.insert("at the index of a specefic function name or by the index", {"name": "test2", "description": "...."})
+print(client.functions)
+
+# replace a specefic function
+client.functions["test2"] = {"name": "test3", "description": "hackerman++"}
+
+# get the index of a specific function by its name or body
+client.functions.index("test3") # the index function calls another function called name_to_key so you could use that directly there is none special about index 
+
+# or get the name by the index
+client.functions.key_to_name(0) # suM
+
+# clear the whole list
+client.functions.clear()
+```
+
 ### This is an edited example of the [official OpenAI API example](https://platform.openai.com/docs/guides/gpt/function-calling)
 
 ## NOTICE!!
