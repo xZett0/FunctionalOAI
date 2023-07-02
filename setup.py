@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
-import codecs
-import os
+from pathlib import Path
 
-VERSION = '0.0.1'
+long_description = (Path(__file__).parent / "README.md").read_text()
+
+VERSION = '0.0.3'
 DESCRIPTION = 'A package that helps users easily create functions to feed to GPT function calling API'
-
 # Setting up
 setup(
     name="funcOAI",
@@ -12,6 +12,8 @@ setup(
     author="x5up0 aka.ryan",
     author_email="x5up0sbu@gmail.com",
     description=DESCRIPTION,
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     packages=find_packages(),
     install_requires=[],
     keywords=['python', "OpenAI", "ChatGPT", "GPT API", "function calling API", "functions", "openai-gpt"],

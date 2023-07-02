@@ -1,32 +1,34 @@
 from inspect import signature, Parameter
 from typing import Callable, List, Dict
+from functions import functionsList
 
 class FunAI:
     def __init__(self) -> None:
-        # TODO: create a special TYPE for the list of functions that has multiple useable methods
-        self.__functionsList: List[Dict] = list()
+        self.__functionsList: functionsList = functionsList()
 
     @property
-    def functions(self) -> List[Dict]:
+    def functions(self) -> functionsList:
         """
         return a list of all the attached functions.
         
         :returns: __functionsList
-        :rtype  : typing.List[typing.Dict]
+        :rtype  : <Class functionsList> 
         """
         return self.__functionsList
 
     @functions.setter
-    def functions(self, fn: List[Dict]) -> List[Dict]:
+    def functions(self, fn: List[Dict]) -> functionsList:
         """
-        manually attach function bodies to functionsList.
+        replace all the functions inside __functionsList with the functions that the user has provided 
 
         :param fn: functions to attach
-        :type fn : typing.List[typing.Dict]
+        :type fn : typing.List[typing.Dict] 
         :returns : __functionsList
-        :rtype   : typing.List[typing.Dict]
+        :rtype   : <Class functionsList>
         """
-        self.__functionsList = fn
+        self.__functionsList.clear()
+        for function in fn:
+            self.__functionsList.append(function)
         return self.__functionsList
 
     @property
@@ -44,14 +46,14 @@ class FunAI:
         return wrapper
 
     @attach.setter
-    def attach(self, fn: Callable) -> List[Dict]:
+    def attach(self, fn: Callable) -> functionsList:
         """
         manually attach a single function body to functionsList.
 
         :param fn: function to attach
         :type fn : typing.Callable
         :returns : __functionsList
-        :rtype   : typing.List[typing.Dict]
+        :rtype   : <Class functionsList>
         """
         self.attachFunctions([fn])
         return self.__functionsList
