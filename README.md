@@ -191,7 +191,7 @@ def add(x: int, y: int):
 
 ## TODO
 
--    create a special type for the functions list, to make it more flexable and accessable, and much more efficient (handeling duplicates etc ...)
+-    ✅create a special type for the functions list, to make it more flexable and accessable, and much more efficient (handeling duplicates etc ...)
 -    create a multi-line docstring parser that gets a description for the function and a description for each of the arguments
 -    handle all possible errors in creating the body of the function, and create backup plans in case something was missing in the function definition
 
