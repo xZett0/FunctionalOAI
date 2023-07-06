@@ -7,8 +7,7 @@ class functionsList(list):
 
     def __getitem__(self, val: Union[str, int]) -> Dict:
         if isinstance(val, str):
-            ntk = self.name_to_key(val)
-            return super().__getitem__(ntk)
+            return self.__map[val]
 
         return super().__getitem__(val)
 

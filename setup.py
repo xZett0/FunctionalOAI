@@ -3,7 +3,7 @@ from pathlib import Path
 
 long_description = (Path(__file__).parent / "README.md").read_text()
 
-VERSION = '0.0.3'
+VERSION = '0.0.4'
 DESCRIPTION = 'A package that helps users easily create functions to feed to GPT function calling API'
 # Setting up
 setup(
