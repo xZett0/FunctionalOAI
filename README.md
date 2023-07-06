@@ -177,13 +177,20 @@ To make this module work correctly with all of you're functions there are set of
 def foo(arg1: int, arg2: str, arg3: list):
 ```
 
--    Providing a docstring that follows [PEP-257 One liner docstrings](https://peps.python.org/pep-0257/#one-line-docstrings) (you could do it as you like as long as its a function desciption without parameters and returns)
+-    Providing a docstring that follows [PEP-287 reStructuredText docstrings]([https://peps.python.org/pep-0257/#one-line-docstrings](https://peps.python.org/pep-0287/))
 
 ```python
 def add(x: int, y: int):
-    """return the sum of x and y"""
+    """
+    return the sum of x and y
+
+    :param[eter] x: the first integer
+    :param[eter] y: the second integer
+    """
     return x + y
 ```
+
+### There MUST be ATLEAST one blank line between the function description and the parameters for this to work
 
 ## WARNING
 
@@ -193,7 +200,7 @@ def add(x: int, y: int):
 ## TODO
 
 -    ✅create a special type for the functions list, to make it more flexable and accessable, and much more efficient (handeling duplicates etc ...)
--    create a multi-line docstring parser that gets a description for the function and a description for each of the arguments
+-    ✅create a multi-line docstring parser that gets a description for the function and a description for each of the arguments
 -    handle all possible errors in creating the body of the function, and create backup plans in case something was missing in the function definition
 
 ## Contribute
